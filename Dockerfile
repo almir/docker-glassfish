@@ -15,7 +15,8 @@ RUN         apt-get update && \
 
 RUN         curl -L -o /tmp/glassfish-4.1.zip http://download.java.net/glassfish/4.1/release/glassfish-4.1.zip && \
             unzip /tmp/glassfish-4.1.zip -d /usr && \
-            rm -f /tmp/glassfish-4.1.zip
+            rm -f /tmp/glassfish-4.1.zip && \
+            find /usr/glassfish4/glassfish/ -name "*.bat" -exec rm -f {} \;
 
 EXPOSE      8080 4848 8181
 
