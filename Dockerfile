@@ -13,7 +13,7 @@ RUN         apt-get update && \
             apt-get install -y curl unzip zip inotify-tools && \
             rm -rf /var/lib/apt/lists/*
 
-RUN         curl -L -o /tmp/glassfish4.zip http://download.java.net/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
+RUN         curl -L -o /tmp/glassfish4.zip http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2.zip && \
             unzip /tmp/glassfish4.zip -d /usr && \
             rm -f /tmp/glassfish4.zip && \
             find /usr/glassfish4/glassfish/ -name "*.bat" -exec rm -f {} \;
