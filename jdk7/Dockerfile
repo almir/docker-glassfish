@@ -15,7 +15,7 @@ RUN         apt-get update && \
 
 RUN         curl -L -o /tmp/glassfish4.zip http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2.zip && \
             unzip /tmp/glassfish4.zip -d /usr && \
-            mv -f /usr/glassfish4 /usr/glassfish \
+            mv -f /usr/glassfish4 /usr/glassfish && \
             rm -f /tmp/glassfish4.zip && \
             find /usr/glassfish/glassfish/ -name "*.bat" -exec rm -f {} \;
 

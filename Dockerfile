@@ -15,7 +15,7 @@ RUN         apt-get update && \
 
 RUN         curl -L -o /tmp/glassfish5.zip http://download.oracle.com/glassfish/5.0/release/glassfish-5.0.zip && \
             unzip /tmp/glassfish5.zip -d /usr && \
-            mv -f /usr/glassfish5 /usr/glassfish \
+            mv -f /usr/glassfish5 /usr/glassfish && \
             rm -f /tmp/glassfish5.zip && \
             find /usr/glassfish/glassfish/ -name "*.bat" -exec rm -f {} \;
 
