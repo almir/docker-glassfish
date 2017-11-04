@@ -1,11 +1,11 @@
-# Glassfish 4.1 with JDK 7 Docker image
+# Glassfish 4.1 with JDK 8 Docker image
 # Based on: https://github.com/aws/aws-eb-glassfish-dockerfiles/blob/aafcfc5e812dfb9b998105d3ca9da1b7f10664e1/4.0-jdk7/Dockerfile
 
-FROM        openjdk:7-jdk
+FROM        openjdk:8-jdk
 
 MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
 
-ENV         JAVA_HOME         /usr/lib/jvm/java-7-openjdk-amd64
+ENV         JAVA_HOME         /usr/lib/jvm/java-8-openjdk-amd64
 ENV         GLASSFISH_HOME    /usr/glassfish4
 ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
 
