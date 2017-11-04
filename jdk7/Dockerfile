@@ -6,7 +6,7 @@ FROM        openjdk:7-jdk
 MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
 
 ENV         JAVA_HOME         /usr/lib/jvm/java-7-openjdk-amd64
-ENV         GLASSFISH_HOME    /usr/glassfish4
+ENV         GLASSFISH_HOME    /usr/glassfish
 ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
 
 RUN         apt-get update && \
@@ -15,12 +15,13 @@ RUN         apt-get update && \
 
 RUN         curl -L -o /tmp/glassfish4.zip http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2.zip && \
             unzip /tmp/glassfish4.zip -d /usr && \
+            mv -f /usr/glassfish4 /usr/glassfish \
             rm -f /tmp/glassfish4.zip && \
-            find /usr/glassfish4/glassfish/ -name "*.bat" -exec rm -f {} \;
+            find /usr/glassfish/glassfish/ -name "*.bat" -exec rm -f {} \;
 
 EXPOSE      8080 4848 8181
 
-WORKDIR     /usr/glassfish4
+WORKDIR     /usr/glassfish
 
 # verbose causes the process to remain in the foreground so that docker can track it
 CMD         asadmin start-domain --verbose
