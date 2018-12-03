@@ -1,7 +1,7 @@
 # Glassfish 4.1 with JDK 7 Docker image
 # Based on: https://github.com/aws/aws-eb-glassfish-dockerfiles/blob/aafcfc5e812dfb9b998105d3ca9da1b7f10664e1/4.0-jdk7/Dockerfile
 
-FROM        openjdk:7-jdk
+FROM        openjdk:7-jdk-alpine
 
 MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
 

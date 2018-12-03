@@ -1,7 +1,7 @@
-# Glassfish 5.0 with JDK 9 Docker image
+# Glassfish 5.0 with JDK 12 Docker image
 # Based on: https://github.com/aws/aws-eb-glassfish-dockerfiles/blob/aafcfc5e812dfb9b998105d3ca9da1b7f10664e1/4.0-jdk7/Dockerfile
 
-FROM        openjdk:9-jdk
+FROM        openjdk:12-jdk-alpine
 
 MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
 
