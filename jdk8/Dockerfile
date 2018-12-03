@@ -5,7 +5,7 @@ FROM        openjdk:8-jdk-alpine
 
 MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
 
-ENV         JAVA_HOME         /usr/lib/jvm/java-8-openjdk-amd64
+ENV         JAVA_HOME         /usr/lib/jvm/default-jvm
 ENV         GLASSFISH_HOME    /usr/glassfish
 ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
 

@@ -1,11 +1,11 @@
-# Glassfish 5.0 with JDK 12 Docker image
+# # Glassfish 5.0 with JDK 8 Docker image
 # Based on: https://github.com/aws/aws-eb-glassfish-dockerfiles/blob/aafcfc5e812dfb9b998105d3ca9da1b7f10664e1/4.0-jdk7/Dockerfile
 
-FROM        openjdk:12-jdk-alpine
+FROM        openjdk:8-jdk-alpine
 
 MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
 
-ENV         JAVA_HOME         /usr/lib/jvm/java-9-openjdk-amd64
+ENV         JAVA_HOME         /usr/lib/jvm/default-jvm
 ENV         GLASSFISH_HOME    /usr/glassfish
 ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
 
