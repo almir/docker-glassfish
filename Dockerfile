@@ -9,9 +9,8 @@ ENV         JAVA_HOME         /usr/lib/jvm/java-9-openjdk-amd64
 ENV         GLASSFISH_HOME    /usr/glassfish
 ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
 
-RUN         apt-get update && \
-            apt-get install -y curl unzip zip inotify-tools && \
-            rm -rf /var/lib/apt/lists/*
+RUN         apk --update --upgrade add curl unzip zip inotify-tools ca-certificates && \
+            rm -rf /var/cache/apk/*
 
 RUN         curl -L -o /tmp/glassfish5.zip http://download.oracle.com/glassfish/5.0/release/glassfish-5.0.zip && \
             unzip /tmp/glassfish5.zip -d /usr && \
